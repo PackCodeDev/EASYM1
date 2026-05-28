@@ -1,1 +1,226 @@
-<p>essay works!</p>
+<!-- BREADCRUMB -->
+<div class="essay-breadcrumb container">
+    <a routerLink="/"><i class="fa-solid fa-house"></i> หน้าแรก</a>
+    <span class="separator">></span>
+    <span class="current">บทความ</span>
+</div>
+
+<!-- MAIN LAYOUT -->
+<div class="essay-layout container">
+    
+    <!-- ================= SIDEBAR LEFT ================= -->
+    <aside class="essay-sidebar">
+        <!-- หมวดหมู่บทความ -->
+        <div class="essay-filter-box">
+            <h3>หมวดหมู่บทความ</h3>
+            <ul class="essay-menu">
+                <li><a href="#" class="active"><i class="fa-solid fa-circle-check"></i> ทั้งหมด</a></li>
+                <li><a href="#"><i class="fa-solid fa-bag-shopping"></i> ช้อปปิ้งไกด์</a></li>
+                <li><a href="#"><i class="fa-solid fa-shirt"></i> เทรนด์ & แฟชั่น</a></li>
+                <li><a href="#"><i class="fa-solid fa-desktop"></i> เทคโนโลยี</a></li>
+                <li><a href="#"><i class="fa-solid fa-house"></i> บ้าน & ไอเดียแต่งบ้าน</a></li>
+                <li><a href="#"><i class="fa-solid fa-heart-pulse"></i> ไลฟ์สไตล์ & สุขภาพ</a></li>
+                <li><a href="#"><i class="fa-solid fa-box-open"></i> รีวิวสินค้า</a></li>
+                <li><a href="#"><i class="fa-regular fa-newspaper"></i> ข่าวสาร & อัปเดต</a></li>
+            </ul>
+        </div>
+
+        <!-- กล่องจดหมายข่าว -->
+        <div class="essay-newsletter">
+            <h4>ไม่พลาดทุกบทความ!</h4>
+            <p>อัปเดตเทรนด์ ไอเดีย และโปรโมชั่นก่อนใคร</p>
+            <input type="email" placeholder="กรอกอีเมลของคุณ">
+            <button class="btn-newsletter">สมัครรับข่าวสาร</button>
+        </div>
+    </aside>
+
+    <!-- ================= CONTENT AREA RIGHT ================= -->
+    <section class="essay-content">
+        
+        <!-- Header & Search -->
+        <div class="essay-header-top">
+            <div class="header-titles">
+                <h1>บทความ & ไลฟ์สไตล์</h1>
+                <p>ไอเดียดีๆ เคล็ดลับการช้อปปิ้ง และเทรนด์ที่น่าสนใจ</p>
+            </div>
+            <div class="essay-search">
+                <input type="text" placeholder="ค้นหาบทความ...">
+                <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </div>
+
+        <!-- Tags / Pills -->
+        <div class="essay-pills-row">
+            <button class="essay-pill active"><i class="fa-solid fa-bag-shopping"></i> ช้อปปิ้งไกด์</button>
+            <button class="essay-pill"><i class="fa-solid fa-shirt" style="color: #ff4757;"></i> เทรนด์ & แฟชั่น</button>
+            <button class="essay-pill"><i class="fa-solid fa-desktop" style="color: #3b82f6;"></i> เทคโนโลยี</button>
+            <button class="essay-pill"><i class="fa-solid fa-house" style="color: #e67e22;"></i> บ้าน & ไอเดียแต่งบ้าน</button>
+            <button class="essay-pill"><i class="fa-solid fa-heart-pulse" style="color: #9b59b6;"></i> ไลฟ์สไตล์ & สุขภาพ</button>
+            <button class="essay-pill"><i class="fa-solid fa-box-open" style="color: #2ecc71;"></i> รีวิวสินค้า</button>
+            <button class="essay-pill"><i class="fa-regular fa-newspaper" style="color: #d63031;"></i> ข่าวสาร & อัปเดต</button>
+        </div>
+
+        <!-- INNER GRID (แยกซ้าย-ขวา ภายในเนื้อหาหลัก) -->
+        <div class="essay-inner-layout">
+            
+            <!-- INNER MAIN (พื้นที่ด้านซ้าย 70%) -->
+            <div class="essay-inner-main">
+                
+                <!-- Hero & Sub-Hero Grid -->
+                <div class="essay-hero-grid">
+                    <!-- บทความใหญ่ -->
+                    <div class="essay-hero-card">
+                        <div class="overlay"></div>
+                        <div class="hero-content">
+                            <span class="essay-tag tag-blue">ช้อปปิ้งไกด์</span>
+                            <h2>เทคนิคช้อปออนไลน์<br>ให้คุ้มทุกบาท</h2>
+                            <p>รวมทริคเด็ด เช็กสลิสต์ก่อนช้อป และวิธีเปรียบเทียบราคา</p>
+                            <button class="btn-read-more">อ่านเพิ่มเติม</button>
+                            <div class="meta">
+                                <span>25 พ.ค. 2024</span><span class="dot">•</span><span><i class="fa-regular fa-eye"></i> 2.4K</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- บทความย่อย 2 อัน -->
+                    <div class="essay-sub-hero-col">
+                        <div class="essay-sub-card">
+                            <div class="text-box">
+                                <span class="essay-tag tag-pink">เทรนด์ & แฟชั่น</span>
+                                <h4>รวมเทรนด์แฟชั่น 2024 ที่ไม่ควรพลาด</h4>
+                                <div class="meta"><span>20 พ.ค. 2024</span><span class="dot">•</span><span><i class="fa-regular fa-eye"></i> 1.8K</span></div>
+                            </div>
+                            <div class="img-box mock-img-1"></div>
+                        </div>
+                        <div class="essay-sub-card">
+                            <div class="text-box">
+                                <span class="essay-tag tag-teal">เทคโนโลยี</span>
+                                <h4>5 Gadget น่าใช้ เพิ่มประสิทธิภาพการทำงาน</h4>
+                                <div class="meta"><span>18 พ.ค. 2024</span><span class="dot">•</span><span><i class="fa-regular fa-eye"></i> 1.6K</span></div>
+                            </div>
+                            <div class="img-box mock-img-2"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Latest Articles Section -->
+                <div class="essay-section-title">
+                    <h3>บทความล่าสุด</h3>
+                </div>
+                
+                <div class="essay-latest-grid">
+                    <!-- Card 1 -->
+                    <div class="essay-card">
+                        <div class="img-box mock-img-3"></div>
+                        <div class="card-body">
+                            <span class="essay-tag tag-orange">บ้าน & ไอเดียแต่งบ้าน</span>
+                            <h4>แต่งห้องเล็กให้น่าอยู่ ด้วยไอเดียง่ายๆ</h4>
+                            <div class="meta"><span>15 พ.ค. 2024</span><span class="dot">•</span><span><i class="fa-regular fa-eye"></i> 1.2K</span></div>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="essay-card">
+                        <div class="img-box mock-img-4"></div>
+                        <div class="card-body">
+                            <span class="essay-tag tag-green">ไลฟ์สไตล์ & สุขภาพ</span>
+                            <h4>7 วิธีดูแลสุขภาพจิตง่ายๆ ทำได้ทุกวัน</h4>
+                            <div class="meta"><span>12 พ.ค. 2024</span><span class="dot">•</span><span><i class="fa-regular fa-eye"></i> 983</span></div>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="essay-card">
+                        <div class="img-box mock-img-5"></div>
+                        <div class="card-body">
+                            <span class="essay-tag tag-blue-new">รีวิวสินค้า</span>
+                            <h4>รีวิวหูฟังตัดเสียงรบกวน รุ่นไหนดี ปี 2024</h4>
+                            <div class="meta"><span>10 พ.ค. 2024</span><span class="dot">•</span><span><i class="fa-regular fa-eye"></i> 2.1K</span></div>
+                        </div>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="essay-card">
+                        <div class="img-box mock-img-6"></div>
+                        <div class="card-body">
+                            <span class="essay-tag tag-purple">ข่าวสาร & อัปเดต</span>
+                            <h4>อัปเดตโปรโมชั่นเด็ด ประจำเดือนพฤษภาคม</h4>
+                            <div class="meta"><span>8 พ.ค. 2024</span><span class="dot">•</span><span><i class="fa-regular fa-eye"></i> 1.5K</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Load More Button -->
+                <div class="essay-view-all-box">
+                    <button class="btn-view-all">ดูบทความทั้งหมด</button>
+                </div>
+
+            </div>
+
+            <!-- INNER SIDE (พื้นที่ด้านขวา 30%) -->
+            <div class="essay-inner-side">
+                
+                <!-- Popular Articles -->
+                <div class="essay-popular-box">
+                    <h3>บทความยอดนิยม</h3>
+                    <div class="pop-list">
+                        <!-- Pop Item 1 -->
+                        <div class="pop-item">
+                            <div class="num-badge">1</div>
+                            <div class="img-box mock-img-7"></div>
+                            <div class="text-box">
+                                <h4>เทคนิคช้อปออนไลน์ให้คุ้มทุกบาท</h4>
+                                <div class="meta"><span>25 พ.ค. 2024</span><span class="dot">•</span><span><i class="fa-regular fa-eye"></i> 2.4K</span></div>
+                            </div>
+                        </div>
+                        <!-- Pop Item 2 -->
+                        <div class="pop-item">
+                            <div class="num-badge">2</div>
+                            <div class="img-box mock-img-2"></div>
+                            <div class="text-box">
+                                <h4>5 Gadget น่าใช้ เพิ่มประสิทธิภาพการทำงาน</h4>
+                                <div class="meta"><span>18 พ.ค. 2024</span><span class="dot">•</span><span><i class="fa-regular fa-eye"></i> 1.6K</span></div>
+                            </div>
+                        </div>
+                        <!-- Pop Item 3 -->
+                        <div class="pop-item">
+                            <div class="num-badge">3</div>
+                            <div class="img-box mock-img-1"></div>
+                            <div class="text-box">
+                                <h4>รวมเทรนด์แฟชั่น 2024 ที่ไม่ควรพลาด</h4>
+                                <div class="meta"><span>20 พ.ค. 2024</span><span class="dot">•</span><span><i class="fa-regular fa-eye"></i> 1.8K</span></div>
+                            </div>
+                        </div>
+                        <!-- Pop Item 4 -->
+                        <div class="pop-item">
+                            <div class="num-badge">4</div>
+                            <div class="img-box mock-img-3"></div>
+                            <div class="text-box">
+                                <h4>แต่งห้องเล็กให้น่าอยู่ ด้วยไอเดียง่ายๆ</h4>
+                                <div class="meta"><span>15 พ.ค. 2024</span><span class="dot">•</span><span><i class="fa-regular fa-eye"></i> 1.2K</span></div>
+                            </div>
+                        </div>
+                        <!-- Pop Item 5 -->
+                        <div class="pop-item">
+                            <div class="num-badge">5</div>
+                            <div class="img-box mock-img-5"></div>
+                            <div class="text-box">
+                                <h4>รีวิวหูฟังตัดเสียงรบกวน รุ่นไหนดี ปี 2024</h4>
+                                <div class="meta"><span>10 พ.ค. 2024</span><span class="dot">•</span><span><i class="fa-regular fa-eye"></i> 2.1K</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Promo Banner -->
+                <div class="essay-promo-banner">
+                    <div class="promo-text-container">
+                        <h4>ช้อปให้สนุก ไม่มีพลาด!</h4>
+                        <p>ติดตามข่าวสารและโปรโมชั่นก่อนใคร</p>
+                        <button class="btn-promo-shop">ไปช้อปเลย <i class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+                    <div class="promo-bags-container"></div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+</div>
