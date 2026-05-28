@@ -1,0 +1,127 @@
+<div class="products-page-container">
+    
+    <!-- ส่วนหัวของหน้าร้านค้า -->
+    <div class="products-page-header">
+        <div class="header-title-section">
+            <h2><i class="fa-solid fa-store font-gradient"></i> สินค้าทั้งหมด</h2>
+            <p class="subtitle">ค้นพบดีลพิเศษและสินค้าคุณภาพในราคาที่ดีที่สุดสำหรับคุณ</p>
+        </div>
+        <div class="products-count-badge">
+            <span class="count">{{ filteredProducts().length }}</span> รายการสินค้า
+        </div>
+    </div>
+
+    <!-- แถบควบคุมตัวกรอง (Filter Chips & Sort Options) -->
+    <div class="filter-controls-bar">
+        
+        <!-- หมวดหมู่ด่วน (Category Chips) -->
+        <div class="category-chips-scroll">
+            @for (cat of categories; track cat) {
+                <button 
+                    class="filter-chip" 
+                    [class.active]="selectedCategory() === cat"
+                    (click)="selectCategory(cat)"
+                >
+                    @if (cat === 'all') {
+                        <i class="fa-solid fa-border-all"></i>
+                    } @else if (cat === 'electronics') {
+                        <i class="fa-solid fa-laptop"></i>
+                    } @else if (cat === 'fashion') {
+                        <i class="fa-solid fa-shirt"></i>
+                    } @else if (cat === 'beauty') {
+                        <i class="fa-solid fa-sparkles"></i>
+                    } @else if (cat === 'home') {
+                        <i class="fa-solid fa-house"></i>
+                    }
+                    <span>{{ categoryMap[cat] }}</span>
+                </button>
+            }
+        </div>
+
+        <!-- กล่องจัดเรียงข้อมูล (Sort Selector) -->
+        <div class="sort-selector-wrapper">
+            <label for="sort-select"><i class="fa-solid fa-arrow-down-wide-short"></i> จัดเรียงตาม:</label>
+            <select id="sort-select" class="custom-select" (change)="changeSort($event)">
+                <option value="popular">สินค้ายอดนิยม</option>
+                <option value="price-asc">ราคา: ต่ำ - สูง</option>
+                <option value="price-desc">ราคา: สูง - ต่ำ</option>
+                <option value="rating">คะแนนรีวิวสูงสุด</option>
+            </select>
+        </div>
+
+    </div>
+
+    <!-- ส่วนแสดงตารางสินค้า -->
+    @if (filteredProducts().length > 0) {
+        <div class="products-showcase-grid animate-fade-in">
+            @for (product of filteredProducts(); track product.id) {
+                <div class="premium-product-card animate-card">
+                    <!-- ป้ายลดราคาเด่นสะดุดตา -->
+                    @if (product.discount) {
+                        <span class="discount-badge-premium">{{ product.discount }}</span>
+                    }
+
+                    <!-- ปุ่มเพิ่มลงรายการโปรด (Wishlist) -->
+                    <button class="wishlist-btn-premium" aria-label="เพิ่มในรายการโปรด">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+
+                    <!-- พื้นหลังรูปภาพสินค้าแบบ Soft Pastel Gradient -->
+                    <div class="product-img-frame">
+                        <i [class]="product.icon" [style.color]="product.iconColor" class="product-core-icon"></i>
+                    </div>
+
+                    <!-- รายละเอียดข้อมูลสินค้า -->
+                    <div class="product-details-frame">
+                        <span class="category-tag">{{ categoryMap[product.category] }}</span>
+                        <h3 class="product-title-text" [title]="product.name">{{ product.name }}</h3>
+                        
+                        <!-- การจัดอันดับ (Rating) -->
+                        <div class="product-rating-stars">
+                            <div class="stars-group">
+                                @for (star of getRatingStars(product.rating); track $index) {
+                                    @if (star === 1) {
+                                        <i class="fa-solid fa-star full-star"></i>
+                                    } @else if (star === 0.5) {
+                                        <i class="fa-solid fa-star-half-stroke half-star"></i>
+                                    } @else {
+                                        <i class="fa-regular fa-star empty-star"></i>
+                                    }
+                                }
+                            </div>
+                            <span class="reviews-count">({{ product.ratingCount }})</span>
+                        </div>
+
+                        <!-- ราคาสินค้าหลักและราคาเดิม -->
+                        <div class="price-section-container">
+                            <div class="prices">
+                                <span class="current-price-tag">฿{{ product.price | number }}</span>
+                                @if (product.oldPrice) {
+                                    <span class="original-price-tag">฿{{ product.oldPrice | number }}</span>
+                                }
+                            </div>
+                            
+                            <!-- ปุ่มเพิ่มลงตะกร้าแบบพรีเมียม (Quick Add) -->
+                            <button class="quick-add-cart-btn" aria-label="เพิ่มลงตะกร้า">
+                                <i class="fa-solid fa-cart-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    } @else {
+        <!-- หน้าจอว่างเปล่ากรณีไม่พบสินค้า (Empty State) -->
+        <div class="empty-products-state animate-fade-in">
+            <div class="empty-state-icon">
+                <i class="fa-solid fa-box-open"></i>
+            </div>
+            <h3>ไม่พบสินค้าในหมวดหมู่นี้</h3>
+            <p>กรุณาลองเลือกหมวดหมู่อื่น หรือปรับแต่งคำค้นหาของคุณใหม่อีกครั้ง</p>
+            <button class="reset-filter-btn" (click)="selectCategory('all')">
+                <i class="fa-solid fa-arrow-rotate-left"></i> แสดงสินค้าทั้งหมด
+            </button>
+        </div>
+    }
+
+</div>

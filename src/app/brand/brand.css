@@ -1,0 +1,385 @@
+/* ==============================================
+   BRAND PAGE SPECIFIC CSS 
+   (จะไม่กระทบโค้ดหน้าอื่นแน่นอน)
+============================================== */
+
+/* Breadcrumb */
+.brand-breadcrumb {
+    padding: 15px 20px;
+    font-size: 13px;
+    color: #666;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.brand-breadcrumb a {
+    color: #555;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.brand-breadcrumb a:hover {
+    color: #5d3ebd;
+}
+
+.brand-breadcrumb .separator {
+    color: #ccc;
+    font-size: 10px;
+}
+
+.brand-breadcrumb .current {
+    color: #5d3ebd;
+    font-weight: 500;
+}
+
+/* Layout Grid */
+.brand-layout {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+/* ================= SIDEBAR ================= */
+.brand-sidebar {
+    align-self: start;
+}
+
+.brand-filter-box {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 15px;
+    border: 1px solid #f1f3f6;
+}
+
+.brand-filter-box h3 {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #222;
+}
+
+/* Categories List */
+.brand-cat-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.brand-cat-list li {
+    margin-bottom: 12px;
+}
+
+.brand-cat-list a {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    color: #555;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.brand-cat-list a i {
+    width: 22px;
+    color: #888;
+    text-align: center;
+}
+
+.brand-cat-list a span {
+    margin-left: auto;
+    color: #aaa;
+    font-size: 12px;
+}
+
+.brand-cat-list a:hover {
+    color: #5d3ebd;
+}
+
+/* Partner Banner */
+.brand-partner-banner {
+    background: linear-gradient(135deg, #8a5ef8, #f083d9);
+    border-radius: 12px;
+    padding: 20px;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.brand-partner-banner h4 {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.brand-partner-banner p {
+    font-size: 12px;
+    opacity: 0.9;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.btn-partner {
+    width: 100%;
+    background-color: #fff;
+    color: #7b5ce4;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.2s;
+}
+
+.btn-partner:hover {
+    background-color: #f8f9fa;
+    transform: translateY(-2px);
+}
+
+/* Alphabet Filter */
+.brand-alpha-filter {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.alpha-btn.active-all {
+    background-color: #f4f0ff;
+    color: #5d3ebd;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: left;
+    cursor: pointer;
+    width: 100%;
+}
+
+.alpha-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    margin-top: 5px;
+}
+
+.alpha-grid button {
+    background: none;
+    border: none;
+    font-size: 12px;
+    color: #555;
+    cursor: pointer;
+    padding: 6px 0;
+    border-radius: 4px;
+    transition: 0.2s;
+}
+
+.alpha-grid button:hover {
+    background-color: #f1f3f6;
+    color: #5d3ebd;
+    font-weight: 600;
+}
+
+/* ================= CONTENT AREA ================= */
+.brand-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Header & Search */
+.brand-header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.header-titles h1 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 5px;
+}
+
+.header-titles p {
+    font-size: 13px;
+    color: #777;
+}
+
+.brand-search {
+    position: relative;
+    width: 280px;
+}
+
+.brand-search input {
+    width: 100%;
+    padding: 10px 40px 10px 15px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    font-size: 13px;
+    outline: none;
+    transition: 0.2s;
+}
+
+.brand-search input:focus {
+    border-color: #5d3ebd;
+}
+
+.brand-search button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #888;
+    cursor: pointer;
+}
+
+/* Tabs */
+.brand-tabs {
+    display: flex;
+    gap: 10px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+    margin-top: 5px;
+}
+
+.tab-btn {
+    background-color: #fff;
+    border: 1px solid #eee;
+    color: #555;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.tab-btn:hover {
+    border-color: #ccc;
+}
+
+.tab-btn.active {
+    background-color: #5d3ebd;
+    color: white;
+    border-color: #5d3ebd;
+    font-weight: 500;
+}
+
+/* Brands Grid (6 columns) */
+.brand-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 12px;
+}
+
+.b-card {
+    background-color: #fff;
+    border: 1px solid #f1f3f6;
+    border-radius: 12px;
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.b-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.05);
+    border-color: #eee;
+}
+
+/* Brand Logos (Mocked styling) */
+.b-logo {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    border: 1px solid #f1f3f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+    overflow: hidden;
+    background-color: #fff;
+    font-size: 12px;
+}
+
+/* Brand Info */
+.b-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 4px;
+}
+
+.b-count {
+    font-size: 11px;
+    color: #888;
+    margin-bottom: 15px;
+}
+
+.b-view-btn {
+    background-color: transparent;
+    border: 1px solid #e1e4e8;
+    color: #5d3ebd;
+    padding: 6px 15px;
+    border-radius: 6px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: 0.2s;
+    width: 85%;
+}
+
+.b-card:hover .b-view-btn {
+    border-color: #5d3ebd;
+    background-color: #f8f6ff;
+}
+
+/* Pagination */
+.brand-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.pg-btn {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    color: #555;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.pg-btn:hover {
+    border-color: #5d3ebd;
+    color: #5d3ebd;
+}
+
+.pg-btn.active {
+    background-color: #5d3ebd;
+    color: white;
+    border-color: #5d3ebd;
+}
+
+.brand-pagination .dots {
+    color: #888;
+}
